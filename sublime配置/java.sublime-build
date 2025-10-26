@@ -1,0 +1,16 @@
+// {
+//   "cmd": ["javac", "$file", "&&", "java", "-Dfile.encoding=UTF-8", "$file_base_name"],
+//   "shell": true,
+//   "encoding": "utf-8"
+// }
+
+{
+  "shell": true,
+  "encoding": "utf-8",
+  "working_dir": "${file_path}",
+  "cmd": [
+    "cmd", "/c",
+    "mkdir out && javac -encoding UTF-8 -d out ${file_name} && cd out && java -Dfile.encoding=UTF-8 ${file_base_name}"
+  ],
+  "selector": "source.java"
+}
