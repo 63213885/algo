@@ -8,8 +8,8 @@ using LL = long long;
 #ifdef LOCAL
 #include "algo/debug.h"
 #else
-#define dbg(...) "jzz2.0"
-#define debug(...) "jzz2.0"
+#define dbg(...) "jzz"
+#define debug(...) "jzz"
 #endif
 
 #define int LL
