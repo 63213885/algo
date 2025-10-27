@@ -4,8 +4,13 @@ using namespace std;
 
 namespace fastread {
 	template <typename T> void inline print_i128(T x) {
-		if (x < 0) cout << "-", x = -x;
-		if (x >= 10) print_i128(x / 10); cout << (int)(x % 10);
+		if (x < 0) {
+			cout << "-", x = -x;
+		}
+		if (x >= 10) {
+			print_i128(x / 10);
+		}
+		cout << (int)(x % 10);
 	}
 }
 using namespace fastread;
@@ -13,7 +18,8 @@ using namespace fastread;
 namespace Debug {
 	template <typename T>
 	void print_arg(const T &Arg, const __int128 &arg) { // Single variable 
-		cout << Arg << " = "; print_i128(arg);
+		cout << Arg << " = ";
+		print_i128(arg);
 	}
 	
 	template <typename T, typename A>
@@ -229,7 +235,8 @@ namespace Debug {
 	
 	template <typename T>
 	void err(string Arg, const T &arg) {
-		print_arg(Arg, arg); cout << endl;
+		print_arg(Arg, arg);
+		cout << endl;
 	}
 	
 	template <typename T, typename... Ts>
