@@ -102,42 +102,35 @@ class LazySegmentTree {
 }
 
 class Info {
-	long sum, len, min;
 	
 	Info() {
-		this.sum = 0;
-		this.len = 1;
-		this.min = 2_000_000_000;
+		
 	}
-	Info(long sum, long len, long min) {
-		this.sum = sum;
-		this.len = len;
-		this.min = min;
+	Info() {
+		
 	}
 	
 	void apply(Tag v) {
-		if (v.x == 2_000_000_000) return;
-		this.sum = this.len * v.x;
-		this.min = v.x;
+		
 	}
 	
 	static Info merge(Info l, Info r) {
-		return new Info(l.sum + r.sum, l.len + r.len, Math.min(l.min, r.min));
+		Info res = new Info();
+		
+		return res;
 	}
 }
 
 class Tag {
-	long x;
 	
 	Tag() {
-		x = 2_000_000_000;
+		
 	}
 	Tag(long x) {
-		this.x = x;
+		
 	}
 	
 	void apply(Tag v) {
-		if (v.x == 2_000_000_000) return;
-		x = v.x;
+		
 	}
 }
