@@ -7,6 +7,9 @@
    long			Long
    char			Character
    boolean		Boolean
+   
+   Integer.MAX_VALUE
+   Integer.MIN_VALUE
    ```
 
 2. 原生数组
@@ -120,6 +123,10 @@
     mp.computeIfAbsent(key, _ -> newValue);
     mp.merge(key, value, Integer::sum);
     mp.getOrDefault(key, newValue);
+    
+    for (Integer key : map.keySet())
+    for (Integer value : map.values())
+    for (Map.Entry<Integer, Integer> entry : map.entrySet())
     ```
 
 12. mysql
