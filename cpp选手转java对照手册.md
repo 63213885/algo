@@ -10,6 +10,8 @@
    
    Integer.MAX_VALUE
    Integer.MIN_VALUE
+   Long.MAX_VALUE
+   Long.MIN_VALUE
    ```
 
 2. 原生数组
