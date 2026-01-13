@@ -14,32 +14,58 @@
    Long.MIN_VALUE
    ```
 
-2. 原生数组
+2. 类型互转
 
-3. String
+   ```java
+   // String s  <=>  char[] t
+   char[] t = s.toCharArray();
+   String s = new String(t);
+   
+   // String s  <=> StringBuilder sb
+   StringBuilder sb = new StringBuilder(s);
+   String s = sb.toString();
+   
+   // int x  <=>  String s
+   String s = Integer.toString(x);   String s = String.valueOf(x);
+   int x = Integer.parseInt(s);   int x = Integer.valueOf(s);
+   
+   // int x  <=> StringBuilder sb
+   StringBuilder sb = new StringBuilder().append(x);
+   int x = Integer.parseInt(sb.toString());
+   
+   // Integer.parseInt() 可以进制转换！！！
+   int n = Integer.parseInt("1010", 2);   // 10
+   int m = Integer.parseInt("1A", 16);    // 26
+   ```
+
+3. 原生数组
+
+4. String
 
    ```java
    String s = "abc";
    s.length();
    s.charAt(i);
-   char[] t = s.toCharArray();
+   
    s.contains(c);
    s.compareTo(t);
    s.startsWith(prefix) / s.endsWith(suffix);
    s.substring(begin) / s.substring(begin, end);
    ```
 
-4. StringBuilder
+5. StringBuilder
 
    ```java
    StringBuilder sb = new StringBuilder("abc");
+   String s = sb.toString();
+   
    sb.reverse();
    String res = sb.toString(); // "cba"
    ```
 
    
 
-5. vector
+6. vector
 
    ```java
    List<Integer> a = ArrayList<>();
@@ -60,7 +86,7 @@
    a.clear();
    ```
 
-6. stack
+7. stack
 
    ```java
    Deque<Integer> st = new ArrayDeque<>();
@@ -72,7 +98,7 @@
    st.peek();
    ```
 
-7. queue
+8. queue
 
    ```java
    Deque<Integer> q = new ArrayDeque<>();
@@ -84,7 +110,7 @@
    q.peek();
    ```
 
-8. deque
+9. deque
 
    ```java
    Deque<Integer> q = new ArrayDeque<>();
@@ -98,12 +124,12 @@
    getFirst() / getLast()
    ```
 
-9. priority_queue
+10. priority_queue
 
    ```
    ```
 
-10. set
+11. set
 
    ```java
    Set<Integer> S = new TreeSet<>();
