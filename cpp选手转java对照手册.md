@@ -56,7 +56,9 @@
 5. StringBuilder
 
    ```java
-   StringBuilder sb = new StringBuilder("abc");
+   StringBuilder sb = new StringBuilder("abc")
+     								.append("ABC")
+     								.append(100);
    String s = sb.toString();
    
    sb.reverse();
