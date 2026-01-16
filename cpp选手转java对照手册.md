@@ -128,7 +128,16 @@
 
 10. priority_queue
 
-   ```
+   ```java
+   // 小根堆
+   PriorityQueue<E> pq = new PriorityQueue<>();
+   
+   // 大根堆
+   PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);
+   
+   pq.offer(x);
+   pq.peek();
+   pq.poll();
    ```
 
 11. set
