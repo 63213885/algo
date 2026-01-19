@@ -32,15 +32,32 @@
    // int x  <=> StringBuilder sb
    StringBuilder sb = new StringBuilder().append(x);
    int x = Integer.parseInt(sb.toString());
+   ```
+
+3. 静态方法
+
+   ```java
+   // Arrays
+   // vector<vector<int>> g(n)
+   List<Integer>[] g = new ArrayList[n];
+   Arrays.setAll(g, i -> new ArrayList<>());
+   
+   int[] a = new int[] {1, 2, 5, 3};
+   Arrays.sort(a);
+   Arrays.sort(a, 1, 2);
+   
+   List<Integer> a = Arrays.asList(1, 2, 3);
+   List<Integer> b = new ArrayList<>(Arrays.asList(1, 2, 3));
+   Set<Integer> s = new HashSet<>(Arrays.asList(1, 2, 3));
    
    // Integer.parseInt() 可以进制转换！！！
    int n = Integer.parseInt("1010", 2);   // 10
    int m = Integer.parseInt("1A", 16);    // 26
    ```
 
-3. 原生数组
+4. 原生数组
 
-4. String
+5. String
 
    ```java
    String s = "abc";
@@ -53,7 +70,7 @@
    s.substring(begin) / s.substring(begin, end);
    ```
 
-5. StringBuilder
+6. StringBuilder
 
    ```java
    StringBuilder sb = new StringBuilder("abc")
@@ -67,7 +84,7 @@
 
    
 
-6. vector
+7. vector
 
    ```java
    List<Integer> a = ArrayList<>();
@@ -86,9 +103,13 @@
    a.contains(x);
    a.isEmpty();
    a.clear();
+   
+   // vector<vector<int>> g(n)
+   List<Integer>[] g = new ArrayList[n];
+   Arrays.setAll(g, i -> new ArrayList<>());
    ```
 
-7. stack
+8. stack
 
    ```java
    Deque<Integer> st = new ArrayDeque<>();
@@ -100,7 +121,7 @@
    st.peek();
    ```
 
-8. queue
+9. queue
 
    ```java
    Deque<Integer> q = new ArrayDeque<>();
@@ -112,7 +133,7 @@
    q.peek();
    ```
 
-9. deque
+10. deque
 
    ```java
    Deque<Integer> q = new ArrayDeque<>();
@@ -126,7 +147,7 @@
    getFirst() / getLast()
    ```
 
-10. priority_queue
+11. priority_queue
 
    ```java
    // 小根堆
