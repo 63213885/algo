@@ -77,6 +77,8 @@
    s.compareTo(t);
    s.startsWith(prefix) / s.endsWith(suffix);
    s.substring(begin) / s.substring(begin, end);
+   
+   s.repeat(n);
    ```
 
 6. StringBuilder
