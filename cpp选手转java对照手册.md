@@ -46,6 +46,9 @@
    Arrays.sort(a);
    Arrays.sort(a, 1, 2);
    
+   int[] g = Arrays.copyOf(f, f.length);
+   int[] g = Arrays.copyOfRange(f, 0, f.length);
+   
    List<Integer> a = Arrays.asList(1, 2, 3);
    List<Integer> b = new ArrayList<>(Arrays.asList(1, 2, 3));
    Set<Integer> s = new HashSet<>(Arrays.asList(1, 2, 3));
@@ -53,6 +56,12 @@
    // Integer.parseInt() 可以进制转换！！！
    int n = Integer.parseInt("1010", 2);   // 10
    int m = Integer.parseInt("1A", 16);    // 26
+   
+   // Collections
+   Collections.sort(list);
+   Collections.reverse(list);
+   Collections.shuffle(list);
+   Collections.swap(list, i, j);
    ```
 
 4. 原生数组
@@ -103,6 +112,8 @@
    a.contains(x);
    a.isEmpty();
    a.clear();
+   
+   a.sort(null);
    
    // vector<vector<int>> g(n)
    List<Integer>[] g = new ArrayList[n];
