@@ -120,6 +120,10 @@
    // vector<vector<int>> g(n)
    List<Integer>[] g = new ArrayList[n];
    Arrays.setAll(g, i -> new ArrayList<>());
+   
+   t.subList(l, r).sort(
+       (a, b) -> Integer.compare(b.get(0), a.get(0))
+   );
    ```
 
 8. stack
@@ -204,8 +208,56 @@
 
 12. mysql
 
+    ```mysql
+    # 执行顺序
+    from
+    where
+    group by
+    having
+    select
+    order by
+    # WHERE 过滤“行（row）” HAVING 过滤“组（group）”
+    
+    # 去重
+    distinct
+    
+    # 返回字符串 s 的长度
+    char_length(s)
+    
+    # 对字符串 s 的下标 i 开始截取一个长度为 len 的子串
+    substring(s, i, len)
+    
+    # 内连接 & 外连接
+    inner join # 内连接 <=> join
+    left join # 左外连接
+    cross join # 交叉连接/笛卡尔积
+    
+    # 全连接（MySQL 不支持 FULL JOIN）
+    SELECT *
+    FROM A LEFT JOIN B ON A.id = B.id
+    UNION
+    SELECT *
+    FROM A RIGHT JOIN B ON A.id = B.id;
+    
+    # 把两个 SELECT 的结果“纵向合并”，并自动去重
+    UNION # 就像把两张结果表 上下拼在一起。
+    UNION ALL # 不去重
+    
+    # 计算时间差
+    # type = day/hour/second;
+    # result = b.date - a.date
+    timestampdiff(type, a.date, b.date) = result
+    
+    # 聚合函数
+    count(*)
+    sum(col) # 自动忽略 NULL
+    if(col = 'val', res1, res2)
+    avg(col)
+    min(col)
+    max(col)
+    
+    round(result, n) # result 保留 n 位小数
+    
     ```
-    timestampdiff(day, a.recordDate, b.recordDate) = -1
-    ```
-
+    
     
