@@ -248,16 +248,47 @@
     # result = b.date - a.date
     timestampdiff(type, a.date, b.date) = result
     
+    # result = a.date - b.date
+    datediff(a.date, b.date) = result
+    
+    # 排序
+    asc # 升序
+    desc # 降序
+    
     # 聚合函数
     count(*)
     sum(col) # 自动忽略 NULL
-    if(col = 'val', res1, res2)
     avg(col)
     min(col)
     max(col)
     
-    round(result, n) # result 保留 n 位小数
+    if(col = 'val', res1, res2)
     
+    ifNull(col, 0) 
+    # IS NULL      → 判 NULL
+    # IS NOT NULL  → 判非 NULL
+    
+    round(result, n) # result 四舍五入，保留 n 位小数
+    mod(n, k) # 返回 n 模 k 的结果
+    
+    where in
+    
+    # 时间数据格式化
+    date_format(date, format)
+    DATE_FORMAT(trans_date, '%Y-%m')
+    date_add(date, interval 1 day)
+    date_sub(date, interval 1 day)
+    
+    # case...when...
+    case
+        when 布尔表达式1 then 返回值1
+        when 布尔表达式2 then 返回值2
+        else 返回值3
+    end
+    
+    # count(*) over(partition by id)
+    select id, count(*) over(partition by id)
+    from Id
     ```
     
     
